@@ -1,7 +1,8 @@
+import Header from '@/components/ui/header';
+import productsData from '@/data/products.json';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import productsData from '../../data/products.json';
 
 type ProductData = {
   id: string;
@@ -40,19 +41,8 @@ export default function HomeScreen() {
 
   return (
     <ScrollView style={styles.container}>
+      <Header />
       <View style={styles.mainContainer}>
-        {/* Header */}
-        <View style={styles.header}>
-          <View style={styles.headerContent}>
-            <View>
-              <Text style={styles.title}>BITREFILL</Text>
-              <Text style={styles.subtitle}>PAY WITH CRYPTO</Text>
-            </View>
-            <View style={styles.iconContainer}>
-              <View style={styles.icon} />
-            </View>
-          </View>
-        </View>
 
         {/* Search Section */}
         <View style={styles.searchSection}>
@@ -111,44 +101,11 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: '#ffffff',
-  },
-  header: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#e5e5e5',
     paddingHorizontal: 24,
-    paddingVertical: 16,
   },
-  headerContent: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    letterSpacing: -0.5,
-  },
-  subtitle: {
-    fontSize: 12,
-    color: '#666',
-    marginTop: 2,
-  },
-  iconContainer: {
-    width: 40,
-    height: 40,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  icon: {
-    width: 24,
-    height: 24,
-    borderWidth: 2,
-    borderColor: '#fff',
-  },
+
   searchSection: {
     flex: 1,
-    paddingHorizontal: 24,
     paddingVertical: 32,
   },
   searchHeader: {

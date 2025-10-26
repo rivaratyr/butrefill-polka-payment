@@ -2,6 +2,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+
 // Cross-platform storage helper
 const storage = {
   async getItem(key: string): Promise<string | null> {

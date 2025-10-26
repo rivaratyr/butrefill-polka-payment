@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "polkadot-road-to-sub0-bitrefill-payment",
-    "slug": "polkadot-road-to-sub0-bitrefill-payment",
+    "name": "novanet-polkadot-bitrefill-payment",
+    "slug": "novanet-polkadot-bitrefill-payment",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "polkadotroadtosub0bitrefillpayment",
+    "scheme": "novanet-polkadot-bitrefill-payment",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
