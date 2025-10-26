@@ -1,0 +1,67 @@
+{
+  "netflix": {
+    "id": "netflix",
+    "name": "Netflix",
+    "title": "NETFLIX GIFT CARD",
+    "description": "Stream unlimited movies and TV shows. Instant delivery. No expiration date.",
+    "category": "Entertainment",
+    "backgroundColor": "#dc2626",
+    "textColor": "#ffffff",
+    "badges": ["INSTANT", "DIGITAL", "NO EXPIRY"],
+    "amounts": [10, 25, 50, 100],
+    "currency": "USD",
+    "logo": "🎬"
+  },
+  "amazon": {
+    "id": "amazon",
+    "name": "Amazon",
+    "title": "AMAZON GIFT CARD",
+    "description": "Shop millions of products on Amazon. Perfect for any occasion. Never expires.",
+    "category": "Shopping",
+    "backgroundColor": "#ff9900",
+    "textColor": "#232f3e",
+    "badges": ["INSTANT", "DIGITAL", "WORLDWIDE"],
+    "amounts": [5, 10, 25, 50, 100],
+    "currency": "USD",
+    "logo": "📦"
+  },
+  "shopify": {
+    "id": "shopify",
+    "name": "Shopify",
+    "title": "SHOPIFY GIFT CARD",
+    "description": "Use at any Shopify store. Support your favorite brands and creators.",
+    "category": "E-commerce",
+    "backgroundColor": "#7ab55c",
+    "textColor": "#ffffff",
+    "badges": ["INSTANT", "DIGITAL", "MULTI-STORE"],
+    "amounts": [15, 25, 50, 75, 100],
+    "currency": "USD",
+    "logo": "🛍️"
+  },
+  "google-play": {
+    "id": "google-play",
+    "name": "Google Play",
+    "title": "GOOGLE PLAY GIFT CARD",
+    "description": "Download apps, games, movies, music and more. Compatible with all Android devices.",
+    "category": "Apps & Games",
+    "backgroundColor": "#01875f",
+    "textColor": "#ffffff",
+    "badges": ["INSTANT", "DIGITAL", "ANDROID"],
+    "amounts": [10, 25, 50, 100],
+    "currency": "USD",
+    "logo": "🎮"
+  },
+  "apple": {
+    "id": "apple",
+    "name": "Apple",
+    "title": "APPLE GIFT CARD",
+    "description": "Use for App Store, iTunes, Apple Music, iCloud and more. Works on all Apple devices.",
+    "category": "Technology",
+    "backgroundColor": "#000000",
+    "textColor": "#ffffff",
+    "badges": ["INSTANT", "DIGITAL", "APPLE ECOSYSTEM"],
+    "amounts": [5, 10, 25, 50, 100],
+    "currency": "USD",
+    "logo": "🍎"
+  }
+}
