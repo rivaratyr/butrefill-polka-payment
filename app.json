@@ -1,17 +1,19 @@
 {
   "expo": {
-    "name": "novanet-polkadot-bitrefill-payment",
-    "slug": "novanet-polkadot-bitrefill-payment",
+    "name": "dotrefill",
+    "slug": "dotrefill",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "novanet-polkadot-bitrefill-payment",
+    "scheme": "dotrefill",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "hu.novanet.dotrefill"
     },
     "android": {
+      "package": "hu.novanet.dotrefill",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -43,6 +45,11 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c59a01a1-901a-4b79-9422-1a707911b069"
+      }
     }
   }
 }
