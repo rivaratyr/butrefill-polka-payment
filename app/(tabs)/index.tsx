@@ -3,6 +3,7 @@ import productsData from '@/data/products.json';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type ProductData = {
   id: string;
@@ -40,9 +41,10 @@ export default function HomeScreen() {
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <Header />
-      <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <ScrollView style={styles.scrollView}>
+        <Header />
+        <View style={styles.mainContainer}>
 
         {/* Search Section */}
         <View style={styles.searchSection}>
@@ -90,12 +92,17 @@ export default function HomeScreen() {
           </View>
         </View>
       </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  scrollView: {
     flex: 1,
   },
   mainContainer: {

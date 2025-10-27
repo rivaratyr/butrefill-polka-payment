@@ -1,6 +1,7 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 // Cross-platform storage helper
@@ -106,8 +107,9 @@ export default function PaymentScreen({
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.mainContainer}>
         {/* Header */}
         <View style={styles.header}>
           <View style={styles.headerContent}>
@@ -182,12 +184,17 @@ export default function PaymentScreen({
           </Pressable>
         </View>
       </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  scrollView: {
     flex: 1,
   },
   mainContainer: {

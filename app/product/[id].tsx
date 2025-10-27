@@ -2,6 +2,7 @@ import productsData from '@/data/products.json';
 import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import React, { useCallback, useEffect, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Cross-platform storage helper
 const storage = {
@@ -167,7 +168,7 @@ export default function ProductScreen() {
     // Show "No product found" if product doesn't exist
     if (!product) {
         return (
-            <View style={styles.container}>
+            <SafeAreaView style={styles.container} edges={['top']}>
                 <View style={styles.notFoundContainer}>
                     <View style={styles.notFoundContent}>
                         <Text style={styles.notFoundIcon}>❌</Text>
@@ -180,13 +181,14 @@ export default function ProductScreen() {
                         </Pressable>
                     </View>
                 </View>
-            </View>
+            </SafeAreaView>
         );
     }
 
     return (
-        <ScrollView style={styles.container}>
-        <View style={styles.mainContainer}>
+        <SafeAreaView style={styles.container} edges={['top']}>
+            <ScrollView style={styles.scrollView}>
+                <View style={styles.mainContainer}>
             {/* Header */}
             <View style={styles.header}>
             <View style={styles.headerContent}>
@@ -280,12 +282,17 @@ export default function ProductScreen() {
             </Pressable>
             </View>
         </View>
-        </ScrollView>
+            </ScrollView>
+        </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  scrollView: {
     flex: 1,
   },
   mainContainer: {
